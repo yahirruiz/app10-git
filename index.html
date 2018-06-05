@@ -1,0 +1,575 @@
+<!doctype html>
+<html>
+<head>
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine2/style.css" />
+<script type="text/javascript" src="engine2/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+<meta charset="utf-8">
+<title>App10 Proyecto final</title>
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/temaapp10.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<!-- <script src="js/acciones.js"></script> -->
+<script src="phonegap.js"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('imagenes/foto3.jpg','imagenes/foto5.jpg','imagenes/foto7.jpg','imagenes/sql4.jpg','imagenes/sql3.jpg','imagenes/esquema2.png','imagenes/tabla2.gif')">
+
+
+<div data-role="page" id="Principal" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Proyecto final Informacion de bases de datos </h1>
+</div>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1></h1>
+<div>
+<br>
+</div>
+<div>
+<img src="imagenes/base.jpg" width="50%" height="50%">
+</div>
+</div>
+</div>
+<div>
+<ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-b">
+<li class ="ui-first-child ui-last-child">
+<a href="#page1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Genera bases de datos y consultas </h2>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>¿Como crear y abrir una base de datos en Access?</h2>
+</a>
+</li>
+<li class="ui-first-child ui-first-child">
+<a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Crear tablas de datos en Access</h2>
+<p></p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Modificar tablas de datos</h2>
+<p>  </p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Introducción a los tipos de datos y las propiedades de los campos</h2>
+<P></P>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Relaciones</h2>
+<P></P>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Creacion de consultas</h2>
+<P></P>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Usos de sentencias en SQL</h2>
+<P></P>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina9" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Modelo entidad-relacion</h2>
+<P></P>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina10" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>Clave Principal</h2>
+<P></P>
+</a>
+</li>
+</ul>
+</div>
+<div data-role="footer" align="center" data-theme="a" data-position="fixed">
+<div>
+<img src="res/android/mdpi.png" width="46" height="46">
+</div>
+<div>
+<h4>Aplicacion Diez</h4>
+<h4>Ruiz Mendez Yahir</h4>
+</div>
+</div>
+</div>
+<div data-role="page" id="page1" data-add-back-btn="true"  data-theme="b">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar"  data-back-btn-theme="b">
+<h1>Genera bases de datos y consultas </h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<H2>¿Qué es una base de datos?</H2>
+<p>Una base de datos es una herramienta para recopilar y organizar información. Las bases de datos pueden almacenar información sobre personas, productos, pedidos u otras cosas. Muchas bases de datos comienzan como una lista en una hoja de cálculo o en un programa de procesamiento de texto. A medida que la lista aumenta su tamaño, empiezan a aparecer redundancias e inconsistencias en los datos. Cada vez es más difícil comprender los datos en forma de lista y los métodos de búsqueda o extracción de subconjuntos de datos para revisión son limitados. Una vez que estos problemas comienzan a aparecer, una buena idea es transferir los datos a una base de datos creada con un sistema de administración de bases de datos (DBMS), como Access.</p>
+<h2>Consultas</h2>
+<p>Las consultas pueden realizar diversas funciones en una base de datos. La función más común es recuperar datos específicos de las tablas. Los datos que quiere ver generalmente están distribuidos en varias tablas y las consultas le permiten verlos en una única hoja de datos. Además, debido a que muchas veces no quiere ver todos los registros a la vez, las consultas le permiten agregar criterios para "filtrar" los datos y obtener solo los registros que quiere.
+Ciertas consultas son "actualizables", es decir, puede modificar los datos de las tablas subyacentes mediante la hoja de datos de la consulta. Si está trabajando en una consulta actualizable, recuerde que los cambios se realizan en realidad en las tablas, no solo en la hoja de datos de la consulta.
+Hay dos variedades básicas de consultas: consultas de selección y consultas de acciones. Una consulta de selección simplemente recupera los datos y los pone a disposición para su uso. Puede ver los resultados de la consulta en la pantalla, imprimirlos o copiarlos al portapapeles. O bien, puede usar el resultado de la consulta como un origen de registro para un formulario o un informe.
+
+Una consulta de acción, tal como el nombre lo indica, realiza una tarea con los datos. Las consultas de acción se pueden usar para crear tablas nuevas, agregar datos a las tablas existentes, o actualizar o eliminar datos.</p>
+<div style="width:40%;">
+<ul data-role="controlgroup" data-type="vertical" data-theme="b">
+<li class ="ui-first-child ui-last-child">
+<a href="https://support.office.com/es-es/article/conceptos-b%C3%A1sicos-sobre-bases-de-datos-a849ac16-07c7-4a31-9948-3c8c94a7c204" data-role="button" target="_self">
+<h2>Aqui mas informacion</h2>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div data-role="footer" align="center" data-theme="a" data-position="fixed">
+<div>
+<img src="res/android/mdpi.png" width="46" height="46">
+</div>
+<h4> Aplicacion Diez Ruiz Mendez Yahir</h4>
+</div>
+</div>
+
+<div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<H1>¿Como crear y abrir una base de datos en Access?</H1>
+</div>
+<div data-role="content" align="center">
+<div>
+<h2>Crear una base de datos</h2>
+<p>Al abrir Access, la vista Backstage muestra la pestaña Nuevo. La pestaña Nuevo ofrece varias formas de crear una base de datos:
+Una base de datos en blanco    Puede empezar desde cero si quiere. Se trata de una buena opción si se tienen requisitos de diseño muy concretos o datos existentes que hay que adaptar o incorporar.
+Una plantilla que se instala con Access    Considere la posibilidad de usar una plantilla si va a iniciar un nuevo proyecto y quiere adelantar trabajo. Access incluye varias plantillas instaladas de manera predeterminada.
+Una plantilla de Office.com    Además de las incluidas en Access, puede encontrar otras muchas plantillas en Office.com. Ni siquiera tiene que abrir un explorador, las plantillas están disponibles en la pestaña Nuevo.</p>
+
+<h2>Abrir una base de datos existente de Access </h2>
+<p>En la pestaña Archivo, haga clic en Abrir.
+En el cuadro de diálogo Abrir, vaya a la base de datos que quiere abrir.
+Siga uno de estos procedimientos:
+Haga doble clic en la base de datos para abrirla en el modo predeterminado que se especifique en el cuadro de diálogo Opciones de Access o el modo que haya establecido una directiva administrativa.
+Haga clic en Abrir para abrir la base de datos con acceso compartido en un entorno multiusuario para que usted y otros usuarios puedan leer y escribir en la base de datos.
+Haga clic en la flecha situada junto al botón Abrir y luego en Abrir en modo solo lectura para abrir la base de datos con acceso de solo lectura de modo que pueda verla pero no editarla. Otros usuarios aún pueden leer y escribir en la base de datos.
+Haga clic en la flecha situada junto al botón Abrir y luego en Abrir en modo solo lectura para abrir la base de datos con acceso exclusivo. Cuando tiene una base de datos abierta con acceso exclusivo, cualquier persona que intente abrir la base de datos recibirá un mensaje que indica que "el archivo ya está en uso".
+Haga clic en la flecha situada junto al botón Abrir y luego en Abrir en modo exclusivo de solo lectura para abrir la base de datos con acceso de solo lectura. Otros usuarios aún pueden abrir la base de datos, pero están limitados al modo de solo lectura. </p>
+<div style="width:40%;">
+<ul data-role="controlgroup" data-type="vertical" data-theme="b">
+<li class ="ui-first-child ui-last-child">
+<a href=https:"//support.office.com/es-es/article/crear-una-base-de-datos-32a1ea1c-a155-43d6-aa00-f08cd1a8f01e" data-role="button" target="_self">
+<h2>Aqui mas informacion</h2>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div data-role="footer" align="center" data-theme="a" data-position="fixed">
+<div>
+<img src="res/android/mdpi.png" width="46" height="46">
+</div>
+<h4> Aplicacion Diez Ruiz Mendez Yahir</h4>
+</div>
+</div>
+
+
+<div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Crear tablas de datos en Access</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<h2>Agregar una tabla </h2>
+<p>Puede agregar nuevas tablas a una base de datos existente mediante los comandos del grupo Tablas de la pestaña Crear.</p>
+<img src="imagenes/crear.gif">
+<h2> ¿Como crear una tabla en Access?</h2>
+<p>1.-Podemos crear tablas para una base de datos nueva o para una base de datos existente. En ambos casos el procedimiento será el mismo. En primer lugar debemos ir a la Ficha Crear y pulsar el botón Tabla.</p>
+<p>2.-Observarás en pantalla del lado izquierdo el panel de navegación enlistando la nueva tabla y del lado derecho una pestaña con el mismo nombre de la tabla y una cuadrícula donde podremos crear los campos de la tabla.</p>
+<p>3.-Selecciona la opción Cambiar nombre de campo y podrás cambiar el nombre del campo directamente en el encabezado.</p>
+<p>4.-Solo nos resta cambiar el tipo de dato de este campo que de acuerdo a mi diseño debe ser de tipo Texto y una longitud de 5. Para hacer el cambio debes ir a la Ficha Campos, que se encuentra dentro de Herramientas de tabla, y dentro del grupo Formato encontrarás una lista con los tipos de datos disponibles y de donde seleccionaré la opción Texto.</p>
+<p>5.-Finalmente debo especificar la longitud del campo dentro cuadro de texto llamado como Tamaño del campo que también se encuentra dentro de la Ficha Campos.</p>
+<p>6.-Los pasos que hemos seguido hasta ahora fueron para modificar un campo que Access ya había colocado y lo hemos modificado. A continuación debemos crear nuevos campos el cual será un procedimiento diferente.</p>
+<p>7.-En primer lugar debemos hacer clic en el encabezado que tiene la leyenda “Haga clic para agregar” y se mostrará la lista de tipos de dato disponibles.</p>
+<p>8.-Una vez seleccionado el tipo de dato para nuestro campo Access nos permitirá capturar el nombre del campo en el encabezado.</p>
+<p>9.-Para los campos de texto podrás modificar la longitud de la misma manera que lo hicimos con el campo primario, es decir, al seleccionar el campo podrás observar el cuadro de texto Tamaño del campo dentro del grupo Propiedades de la Ficha Campos.</p>
+<p>10.-De esta manera hemos terminado de crear la estructura nuestra primera tabla en Access pero ¡aún hace falta el paso final! Nunca olvides presionar el botón Guardar (en la barra de acceso rápido) de manera que se guarden los cambios. Access mostrará un cuadro de diálogo para salvar la nueva tabla.</p>
+<p>11.-Es en ese momento que tenemos la oportunidad para dar un nombre descriptivo a la tabla de manera que siempre sepamos el tipo de información que guarda. Al pulsar el botón Aceptar verás reflejado el nuevo nombre de la tabla.</p>
+<!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="data1/images/imagen1.png" alt="imagen1" title="imagen1" id="wows1_0"/></li>
+		<li><img src="data1/images/imagen2.png" alt="imagen2" title="imagen2" id="wows1_1"/></li>
+		<li><img src="data1/images/imagen3.png" alt="imagen3" title="imagen3" id="wows1_2"/></li>
+		<li><img src="data1/images/imagen4.png" alt="imagen4" title="imagen4" id="wows1_3"/></li>
+		<li><img src="data1/images/imagen5.png" alt="imagen5" title="imagen5" id="wows1_4"/></li>
+		<li><img src="data1/images/imagen6.png" alt="imagen6" title="imagen6" id="wows1_5"/></li>
+		<li><img src="data1/images/imagen7.png" alt="imagen7" title="imagen7" id="wows1_6"/></li>
+		<li><img src="data1/images/imagen10.png" alt="imagen10" title="imagen10" id="wows1_7"/></li>
+		<li><img src="data1/images/imagen9.png" alt="imagen9" title="imagen9" id="wows1_8"/></li>
+		<li><a href="http://wowslider.com/vi"><img src="data1/images/imagen8.png" alt="slider" title="imagen8" id="wows1_9"/></a></li>
+		<li><img src="data1/images/imagen11.png" alt="imagen11" title="imagen11" id="wows1_10"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="imagen1"><span><img src="data1/tooltips/imagen1.png" alt="imagen1"/>1</span></a>
+		<a href="#" title="imagen2"><span><img src="data1/tooltips/imagen2.png" alt="imagen2"/>2</span></a>
+		<a href="#" title="imagen3"><span><img src="data1/tooltips/imagen3.png" alt="imagen3"/>3</span></a>
+		<a href="#" title="imagen4"><span><img src="data1/tooltips/imagen4.png" alt="imagen4"/>4</span></a>
+		<a href="#" title="imagen5"><span><img src="data1/tooltips/imagen5.png" alt="imagen5"/>5</span></a>
+		<a href="#" title="imagen6"><span><img src="data1/tooltips/imagen6.png" alt="imagen6"/>6</span></a>
+		<a href="#" title="imagen7"><span><img src="data1/tooltips/imagen7.png" alt="imagen7"/>7</span></a>
+		<a href="#" title="imagen10"><span><img src="data1/tooltips/imagen10.png" alt="imagen10"/>8</span></a>
+		<a href="#" title="imagen9"><span><img src="data1/tooltips/imagen9.png" alt="imagen9"/>9</span></a>
+		<a href="#" title="imagen8"><span><img src="data1/tooltips/imagen8.png" alt="imagen8"/>10</span></a>
+		<a href="#" title="imagen11"><span><img src="data1/tooltips/imagen11.png" alt="imagen11"/>11</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">jquery slideshow</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+</div>
+</div>
+<div data-role="footer" align="center" data-theme="a" data-position="fixed">
+<div>
+<img  src="res/android/mdpi.png" width="46" height="46">
+</div>
+<h4> Aplicacion Diez Ruiz Mendez Yahir</h4>
+</div>
+</div>
+
+
+<div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Modificar tablas de datos</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image61','','imagenes/tabla2.gif',1)"><img src="imagenes/tabla.gif" width="348" height="148" id="Image61"></a>
+<h2>Copiar los datos de otro origen en una tabla de Access</h2>
+<p> Si los datos están almacenados actualmente en otro programa, como, por ejemplo, Excel, puede copiarlos y pegarlos en una tabla de Access. En general, esto funciona mejor si los datos ya están separados en columnas, tal y como están en una hoja de cálculo de Excel. Si los datos se encuentran en un programa de procesamiento de texto, es mejor separar las columnas de datos con pestañas o convertir los datos en tabla en el programa de procesamiento de texto antes de copiarlos. Si los datos se tienen que editar o manipular (por ejemplo, separar los nombres completos en nombres y apellidos), puede que le convenga hacerlo antes de copiarlos, sobre todo si no está familiarizado con Access.
+Cuando pega datos en una tabla vacía, Access establece el tipo de datos de cada campo según el tipo de datos que encuentra allí. Por ejemplo, si un campo copiado no contiene nada más que valores de fecha, Access aplica el tipo de datos de fecha y hora a ese campo. Si el campo copiado solo contiene las palabras "sí" y "no", Access aplica el tipo de datos Sí/No al campo.
+Access asigna nombre a los campos en función de lo que encuentra en la primera fila de datos pegados. Si la primera fila de datos pegados es de tipo similar a las filas siguientes, Access determina que la primera fila forma parte de los datos y asigna nombres genéricos (F1, F2, etc.) a los campos. Si la primera fila de datos pegados no es similar a las filas siguientes, Access determina que la primera fila consta de nombres de campo. Access asigna nombre a los campos en consecuencia y no incluye la primera fila en los datos. </p>
+</div>
+</div>
+<div data-role="footer" align="center" data-theme="a" data-position="fixed">
+<div>
+<img src="res/android/mdpi.png" width="46" height="46">
+</div>
+<h4>Aplicacion Diez Ruiz Mendez Yahir</h4>
+</div>
+</div>
+
+
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Introducción a los tipos de datos y las propiedades de los campos</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<div data-role="main" class="ui-content" align="center">
+<h2>Propiedad de tamaño de campo </h2>
+<p>Después de crear un campo y establecer su tipo de datos, se pueden establecer otras propiedades de campo. El tipo de datos del campo determina qué otras propiedades se pueden establecer. Por ejemplo, se puede controlar el tamaño de un campo de texto estableciendo su propiedad Tamaño del campo.
+
+Para los campos Número y Moneda, la propiedad Tamaño del campo es especialmente importante, porque determina el intervalo de valores de campo. Por ejemplo, un campo Número de un bit solo puede contener los enteros comprendidos entre 0 y 255.
+
+La propiedad Tamaño del campo también determina cuánto espacio en disco requiere que cada valor de un campo Número. Dependiendo del tamaño del campo, el número puede usar exactamente 1, 2, 4, 8, 12 o 16 bytes. </p>
+<h2>Tipos de datos en las relaciones y las combinaciones </h2>
+<p>Una relación de tabla es una asociación entre campos comunes de dos tablas. Una relación puede ser uno a uno, uno a varios o varios a varios.
+
+Una combinación es una operación SQL que combina datos de dos orígenes en un registro de un conjunto de registros de una consulta basándose en los valores de un campo especificado que los orígenes tienen en común. Una combinación puede ser una combinación interna, una combinación externa izquierda o una combinación externa derecha.
+
+Al crear una relación de tabla o agregar una combinación a una consulta, los campos que se conectan deben tener los mismos tipos de datos o compatibles. Por ejemplo, no se puede crear una combinación entre un campo Número y un campo Texto, incluso si coinciden los valores de esos campos.
+
+En una relación o una combinación, los campos establecidos en el tipo de datos Autonumeración son compatibles con los campos establecidos en el tipo de datos Número si la propiedad Tamaño del campo del segundo es Entero largo.
+
+No se puede cambiar el tipo de datos o la propiedad Tamaño del campo de un campo que interviene en una relación de tabla. Se puede eliminar temporalmente la relación para cambiar la propiedad Tamaño del campo. Pero si se cambia el tipo de datos, no se podrá volver a crear la relación si no se cambia primero el tipo de datos del campo relacionado. Para más información sobre las tablas, vea el artículo Introducción a las tablas. </p>
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image56','','imagenes/foto3.jpg',1)"><img src="imagenes/foto2.jpg" width="50%" height="50%" id="Image56"></a>
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image57','','imagenes/foto5.jpg',1)"><img src="imagenes/foto4.jpg" width="50%" height="50%" id="Image57"></a>
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image58','','imagenes/foto7.jpg',1)"><img src="imagenes/foto6.jpg" width="50%" height="50%" id="Image58"></a>
+<div style="width:40%;">
+  <ul data-role="controlgroup" data-type="vertical" data-theme="b">
+<li class ="ui-first-child ui-last-child">
+<a href="https://support.office.com/es-es/article/introducci%C3%B3n-a-los-tipos-de-datos-y-las-propiedades-de-los-campos-30ad644f-946c-442e-8bd2-be067361987c" data-role="button" target="_self">
+<h2>Aqui mas informacion</h2>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div data-role="footer" align="center" data-theme="a" data-position="fixed">
+<div>
+<img src="res/android/mdpi.png" width="46" height="46">
+</div>
+<h4> Aplicacion Diez Ruiz Mendez Yahir</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Relaciones</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<h2>Crear la primera relación.</h2>
+<p>1.-En la pestaña Herramientas de base de datos, en el grupo Relaciones, haga clic en Relaciones.  </p>
+<p>2.-Si aún no definió ninguna relación, aparece automáticamente el cuadro de diálogo Mostrar tabla. Si no aparece, en la pestaña Diseño, en el grupo Relaciones, haga clic en Mostrar tabla.
+En el cuadro de diálogo Mostrar tabla se muestran todas las tablas y las consultas de la base de datos. Para ver únicamente las tablas, haga clic en Tablas. </p>
+<p>3.-Seleccione una o varias tablas y luego haga clic en Agregar. Cuando termine de agregar tablas, haga clic en Cerrar. </p>
+<p>4.-Arrastre un campo (normalmente, la clave principal) de una tabla al campo común (clave externa) de la otra tabla. Para arrastrar varios campos, presione la tecla Ctrl, haga clic en cada uno de los campos y luego arrástrelos. Aparece el cuadro de diálogo Modificar relaciones. </p>
+<p>5.- Compruebe que los nombres de campo que se muestran sean de los campos comunes de la relación. Si un nombre de campo es incorrecto, haga clic en él y seleccione el campo apropiado en la lista.</p>
+<p>6.-Para exigir la integridad referencial para esta relación, active la casilla Exigir integridad referencial. </p>
+<p>7.-Haga clic en Crear. </p>
+<p>8.-Cuando haya terminado en la ventana Relaciones, haga clic en Guardar para guardar los cambios de diseño de relaciones. </p>
+<!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container2">
+<div class="ws_images"><ul>
+		<li><img src="data2/images/img1.png" alt="img1" title="img1" id="wows2_0"/></li>
+		<li><img src="data2/images/img2.png" alt="img2" title="img2" id="wows2_1"/></li>
+		<li><img src="data2/images/img3.png" alt="img3" title="img3" id="wows2_2"/></li>
+		<li><img src="data2/images/img4.png" alt="img4" title="img4" id="wows2_3"/></li>
+		<li><img src="data2/images/img5.png" alt="img5" title="img5" id="wows2_4"/></li>
+		<li><img src="data2/images/img6.png" alt="img6" title="img6" id="wows2_5"/></li>
+		<li><a href="http://wowslider.com"><img src="data2/images/img7.png" alt="wowslider" title="img7" id="wows2_6"/></a></li>
+		<li><img src="data2/images/img8.png" alt="img8" title="img8" id="wows2_7"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="img1"><span><img src="data2/tooltips/img1.png" alt="img1"/>1</span></a>
+		<a href="#" title="img2"><span><img src="data2/tooltips/img2.png" alt="img2"/>2</span></a>
+		<a href="#" title="img3"><span><img src="data2/tooltips/img3.png" alt="img3"/>3</span></a>
+		<a href="#" title="img4"><span><img src="data2/tooltips/img4.png" alt="img4"/>4</span></a>
+		<a href="#" title="img5"><span><img src="data2/tooltips/img5.png" alt="img5"/>5</span></a>
+		<a href="#" title="img6"><span><img src="data2/tooltips/img6.png" alt="img6"/>6</span></a>
+		<a href="#" title="img7"><span><img src="data2/tooltips/img7.png" alt="img7"/>7</span></a>
+		<a href="#" title="img8"><span><img src="data2/tooltips/img8.png" alt="img8"/>8</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com">wowslider.com</a> by WOWSlider.com v8.7</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine2/wowslider.js"></script>
+<script type="text/javascript" src="engine2/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+</div>
+</div>
+<div data-role="footer" align="center" data-theme="a" data-position="fixed">
+<div>
+<img src="res/android/mdpi.png" width="46" height="46">
+</div>
+<h4>Aplicacion Diez Ruiz Mendez Yahir</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Creacion de consultas</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>Consultas</h1>
+<div>
+<br>
+</div>
+<div>
+<img src="imagenes/consultas.gif" width="50%" height="50%">
+</div>
+</div>
+</div>
+<h2>Crear una consulta de creación de tabla</h2>
+<p>Para crear una consulta de creación de tabla, cree primero una consulta de selección y, a continuación, conviértala en una consulta de creación de tabla. La consulta de selección puede usar campos calculados y expresiones para ayudar a devolver los datos que necesite. En los siguientes pasos se explica cómo crear y convertir la consulta. Si ya tiene una consulta de selección que se ajuste a sus necesidades, vaya a los pasos descritos para convertir la consulta de selección y ejecutar la consulta de creación de tabla.</p>
+<h2>Crear la consulta de selección </h2>
+<p>1.-En la pestaña Crear del grupo Consultas, haga clic en Diseño de consulta. Nota: Si está usando Access 2007, en la pestaña Crear del grupo Otros, deberá hacer clic en Diseño de consulta.</p>
+<p>2.-En el cuadro de diálogo Mostrar tabla, haga doble clic en las tablas de las que desee recuperar datos. Cada tabla aparece como una ventana en la sección superior del diseñador de consultas. Haga clic en Cerrar cuando termine de agregar tablas.</p>
+<p>3.-En cada tabla, haga doble clic en los campos que desee usar en la consulta. Cada campo aparece en una celda en blanco de la fila Campo de la cuadrícula de diseño. Esta figura muestra la cuadrícula de diseño con varios campos de tabla agregados: </p>
+<p>4.- De forma opcional, agregue expresiones a la fila Campo.</p>
+<p> 5.-Si lo desea, agregue criterios a la fila Criterios de la cuadrícula de diseño. </p>
+<p>6.-Haga clic en Ejecutar  Imagen del botón para ejecutar la consulta y mostrar los resultados en una hoja de datos. </p>
+<p>7.-Si lo desea, modifique los campos, las expresiones o los criterios y después vuelva a ejecutar la consulta hasta que devuelva los datos que desee colocar en la nueva tabla.</p>
+<div style="width:40%;">
+<ul data-role="controlgroup" data-type="vertical" data-theme="b">
+<li class ="ui-first-child ui-last-child">
+<a href="https://support.office.com/es-es/article/crear-una-consulta-de-creaci%C3%B3n-de-tabla-96424f9e-82fd-411e-aca4-e21ad0a94f1b" data-role="button" target="_self">
+<h2>Aqui mas informacion</h2>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div data-role="footer" align="center" data-theme="a" data-position="fixed">
+<div>
+<img src="res/android/mdpi.png" width="46" height="46">
+</div>
+<h4>Aplicacion Diez Ruiz Mendez Yahir</h4>
+</div>
+</div>
+
+<div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>SQL</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<h2>Operaciones básicas de manipulación de datos en SQL </h2>
+<p> Hay cuatro instrucciones para realizar estas tareas:
+
+INSERT: Inserta filas en una tabla. Se corresponde con la “C” de CRUD.
+SELECT: muestra información sobre los datos almacenados en la base de datos. Dicha información puede pertenecer a una o varias tablas. Es la “R”.
+UPDATE: Actualiza información de una tabla. Es, obviamente, la “U”.
+DELETE: Borra filas de una tabla. Se corresponde con la “D”.
+Ahora nos vamos a centrar en la “R” de CRUD, es decir, en cómo recuperar la información que nos interesa de dentro de una base de datos, usando para ello el lenguaje de consulta o SQL.  Ya nos preocuparemos luego de cómo llegamos a introducir los datos primeramente.
+Para realizar consultas sobre las tablas de las bases de datos disponemos de la instrucción SELECT. Con ella podemos consultar una o varias tablas. Es sin duda el comando más versátil del lenguaje SQL.
+Existen muchas cláusulas asociadas a la sentencia SELECT (GROUP BY, ORDER, HAVING, UNION). También es una de las instrucciones en la que con más frecuencia los motores de bases de datos incorporan cláusulas adicionales al estándar, que es el que veremos aqui </p>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>SQL</h1>
+<div>
+<br>
+</div>
+<div>
+<img src="imagenes/sql.png" width="50%" height="50%">
+ </div>
+</div>
+</div>
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image59','','imagenes/sql3.jpg',1)"><img src="imagenes/sql4.jpg" width="300" height="225" id="Image59"></a> </div>
+</div>
+<div data-role="footer" align="center" data-theme="a" data-position="fixed">
+<div>
+<img src="res/android/mdpi.png" width="46" height="46">
+</div>
+<h4>Aplicacion Diez Ruiz Mendez Yahir</h4>
+</div>
+</div>
+
+<div data-role="page" id="Pagina9" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Modelo entidad-relacion</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>Modelo</h1>
+<div>
+<br>
+</div>
+<div>
+<img src="imagenes/esquema3.png" width="50%" height="50%">
+</div>
+</div>
+</div>
+<div>
+<h2>Modelo entidad-relación ER </h2>
+<p> El modelo entidad-relación ER es un modelo de datos que permite representar cualquier abstracción, percepción y conocimiento en un sistema de información formado por un conjunto de objetos denominados entidades y relaciones, incorporando una representación visual conocida como diagrama entidad-relación.
+
+CONCEPTOS DEL MODELO ER
+
+Ejemplares - Conjuntos - Extensión - Instancia. Se denominan ejemplares a los registros que guardan una serie de características similares o que pueden ser agrupados o clasificados dadas sus características comunes en grupos bien delimitados. A los ejemplares también se los conoce como registros de una tabla de una base de datos, o en términos de abstracción como la extensión de la base de datos. Por ejemplo es la lista de usuarios de una biblioteca, la lista de productos con sus características, la lista de tipos de documentos y su definición.
+Entidad. La entidad es cualquier clase de objeto o conjunto de elementos presentes o no, en un contexto determinado dado por el sistema de información o las funciones y procesos que se definen en un plan de automatización. Dicho de otra forma, las entidades las constituyen las tablas de la base de datos que permiten el almacenamiento de los ejemplares o registros del sistema, quedando recogidos bajo la denominación o título de la tabla o entidad. Por ejemplo, la entidad usuarios guarda los datos personales de los usuarios de la biblioteca, la entidad catalogo registra todos los libros catalogados, la entidad circulación todos los libros prestados y devueltos y así sucesivamente con todos los casos.
+Atributos - Intención. Son las características, rasgos y propiedades de una entidad, que toman como valor una instancia particular. Es decir, los atributos de una tabla son en realidad sus campos descriptivos, el predicado que permite definir lo que decimos de un determinado sujeto. Por ejemplo de una entidad o tabla catálogo, se pueden determinar los atributos título, subtítulo, título paralelo, otras formas del título, autor principal, otras menciones de responsabilidad, edición, mención de edición, editorial, lugar de publicación, fecha de publicación,...
+Relación. Vínculo que permite definir una dependencia entre los conjuntos de dos o más entidades. Esto es la relación entre la información contenida en los registros de varias tablas. Por ejemplo, los usuarios suelen clasificarse según una lista de tipos de usuarios, ya sean profesores, alumnos o investigadores. De esta forma es posible emitir la relación entre el usuario Jorge Martínez como alumno y Enrique Valtierra como profesor. Las relaciones son definidas de forma natural en un diagrama relacional para expresar un modelo cognitivo que dará lugar posteriormente a las interrelaciones de las entidades.
+Interrelación. Las interrelaciones las constituyen los vínculos entre entidades, de forma tal que representan las relaciones definidas en el esquema relacional de forma efectiva. Esto no sólo la relación de los registros sino de sus tablas y de las características de la interrelación entre las entidades, a través de un campo clave que actúa como código de identificación y referencia para relacionar (es decir, como nexo de unión y articulación de la relación). Los tipos de interrelaciones entre entidades o tablas se realizan aplicando las reglas de cardinalidad y modalidad.
+Entidades fuertes. Lo constituyen las tablas principales de la base de datos que contienen los registros principales del sistema de información y que requieren de entidades o tablas auxiliares para completar su descripción o información. Por ejemplo la tabla usuario es una entidad fuerte en relación a la tabla tipos de usuarios, que es una entidad débil dada su condición auxiliar para clasificar a los usuarios registrados en la biblioteca.
+Entidades débiles. Son entidades débiles a las tablas auxiliares de una tabla principal a la que completan o complementan con la información de sus registros relacionados. Por ejemplo también son consideradas entidades débiles las tablas intermedias que sirven para compartir información de varias tablas principales. </p>
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image60','','imagenes/esquema2.png',1)"><img src="imagenes/esquema1.png" width="60%" height="50%" id="Image60"></a> </div>
+</div>
+<div data-role="footer" align="center" data-theme="a" data-position="fixed">
+<div>
+<img src="res/android/mdpi.png" width="46" height="46">
+</div>
+<h4>Aplicacion Diez Ruiz Mendez Yahir</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina10" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>clave principal  </h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>Clave Principal y Clave externa</h1>
+<div>
+<br>
+</div>
+<div>
+<img src="imagenes/clave1.gif" width="50%" height="50%">
+</div>
+</div>
+</div>
+<h2>Información general sobre las claves principales en Access </h2>
+<p>Access utiliza campos de clave principal para asociar rápidamente datos de varias tablas y combinarlos de forma que tenga sentido. Puede incluir los campos de clave principal en otras tablas para hacer referencia a la tabla que sea origen de la clave principal. En esas tablas, los campos se denominan claves externas. Por ejemplo, un campo Id. de cliente de la tabla Clientes también podría aparecer en la tabla Pedidos. En la tabla Clientes, esta es la clave principal. En la tabla Pedidos se denomina clave externa. Una clave externa es, sencillamente, la clave principal de otra tabla. Para más información, vea el tema Conceptos básicos del diseño de una base de datos.  </p>
+<h2>Definir la clave principal con los campos existentes en Access </h2>
+<p>Para que una clave principal funcione correctamente, el campo debe identificar inequívocamente cada fila, no debe contener un valor vacío o nulo y casi nunca (o, preferiblemente, nunca) debe cambiar.
+Abra la base de datos que desea modificar.
+En el panel de navegación, haga clic con el botón secundario en la tabla en la que desea establecer la clave principal y, en el menú contextual, haga clic en Vista Diseño.Sugerencia: Si no ve el panel de navegación, presione F11.
+Seleccione el campo o los campos que desea usar como clave principal.Para seleccionar un campo, haga clic en el selector de filas del campo que desee.Para seleccionar más de un campo para crear una clave compuesta, mantenga presionada la tecla CTRL y, a continuación, haga clic en el selector de filas de cada campo.En el grupo Herramientas de la pestaña Diseño, haga clic en Clave principal. </p>
+<div style="width:40%;">
+<ul data-role="controlgroup" data-type="vertical" data-theme="b">
+<li class ="ui-first-child ui-last-child">
+<a href="https://support.office.com/es-es/article/agregar-o-cambiar-la-clave-principal-de-una-tabla-en-access-07b4a84b-0063-4d56-8b00-65f2975e4379" data-role="button" target="_self">
+<h2>Aqui mas informacion</h2>
+</a>
+</li>
+</ul>
+</div>
+<h2>Datos del autor</h2>
+<p> Yahir Ruiz Mendez 4a Desarrolla Aplicaciones Wed Jose Antonio Gomez Hernandez
+</div>
+</div>
+<div data-role="footer" align="center" data-theme="a" data-position="fixed">
+<div>
+<img src="res/android/mdpi.png" width="46" height="46">
+</div>
+<h4>Aplicacion Diez Ruiz Mendez Yahir </h4>
+</div>
+</div>
+
+</div>
+</body>
+</html>
+         
+
